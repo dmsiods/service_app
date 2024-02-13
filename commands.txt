@@ -1,1 +1,5 @@
 docker-compose run --rm web-app sh -c "django-admin startproject service ."
+docker-compose run --rm web-app sh -c "python manage.py migrate"
+docker-compose run --rm web-app sh -c "python manage.py createsuperuser" (admin, admin)
+
+docker exec -it mft_web sh (подключение к контейнеру)
