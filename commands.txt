@@ -3,3 +3,6 @@ docker-compose run --rm web-app sh -c "python manage.py migrate"
 docker-compose run --rm web-app sh -c "python manage.py createsuperuser" (admin, admin)
 
 docker exec -it mft_web sh (подключение к контейнеру)
+
+docker-compose run --rm web-app sh -c "python manage.py startapp clients"
+docker-compose run --rm web-app sh -c "python manage.py makemigrations clients"

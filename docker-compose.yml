@@ -2,7 +2,6 @@ services:
   web-app:
     build:
       context: .
-    container_name: mft_web
     ports:
       - "8000:8000"
     volumes:
