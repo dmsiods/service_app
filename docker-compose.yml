@@ -20,7 +20,12 @@ services:
 
   database:
    image: postgres:14.6-alpine
+   volumes:
+     - postgres_data:/var/lib/postgresql/data/
    environment:
      - POSTGRES_DB=dbname
      - POSTGRES_USER=dbuser
      - POSTGRES_PASSWORD=pass
+
+volumes:
+  postgres_data:
